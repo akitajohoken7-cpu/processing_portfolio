@@ -85,12 +85,12 @@ void draw() {
 void anpan(float x, float y) {
   // 外側
   fill(255, 210, 160);  
-  stroke(0);
+  stroke(0);//線の色
   beginShape();
-  vertex(x, y);
-  bezierVertex(x + 50, y - 20, x + 60, y + 30, x + 20, y + 40);
+  vertex(x, y);//書き始める基準点
+  bezierVertex(x + 50, y - 20, x + 60, y + 30, x + 20, y + 40);//ベジェ曲線を描く命令
   bezierVertex(x - 10, y + 50, x - 30, y + 10, x, y);
-  endShape(CLOSE);
+  endShape(CLOSE);//図形を閉じる（完成させる）
 
   // 中の餡子
   fill(90, 20, 50);
@@ -130,3 +130,4 @@ void humancall(float x, float y, String msg) {
   textSize(18);
   text(msg, x+20, y+25, 160, 60); // ←はみ出さないように範囲指定
 }
+
